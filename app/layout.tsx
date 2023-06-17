@@ -6,7 +6,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Airbnb',
-  description: 'Airbnb clone',
+  description: 'Airbnb Clone',
 }
 
 const font = Nunito({
