@@ -12,7 +12,7 @@ import {
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
 import Modal from './Modal';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import { toast } from 'react-hot-toast';
@@ -86,6 +86,11 @@ const LoginModal = () => {
     </div>
   )
 
+  const toggle = useCallback(() => {
+    loginModal.onClose()
+    registerModal.onOpen()
+  }, [loginModal, registerModal])
+
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
@@ -114,7 +119,7 @@ const LoginModal = () => {
             First time using Airbnb?
           </div>
           <div
-            onClick={registerModal.onClose}
+            onClick={toggle}
             className="
               text-neutral-800
               cursor-pointer
@@ -127,6 +132,7 @@ const LoginModal = () => {
       </div>
     </div>
   )
+
   return (
     <Modal
       disabled={isLoading}
