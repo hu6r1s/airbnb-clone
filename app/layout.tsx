@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast'
 import getCurrentUser from './actions/getCurrentUser'
 import LoginModal from './components/modals/LoginModal'
 import RegisterModal from './components/modals/RegisterModal'
+import RentModal from './components/modals/RentModal'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 
@@ -26,10 +27,13 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Toaster />
+        <RentModal />
         <LoginModal />
         <RegisterModal />
         <Navbar currentUser={currentUser} />
-        {children}
+        <div className="pb-20 pt-28">
+          {children}
+        </div>
       </body>
     </html>
   )
