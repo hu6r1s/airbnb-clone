@@ -49,7 +49,7 @@ const Counter: React.FC<CounterProps> = ({
             border-[1px]
             border-neutral-400
             flex
-            itmes-center
+            items-center
             justify-center
             text-neutral-600
             cursor-pointer
@@ -71,7 +71,7 @@ const Counter: React.FC<CounterProps> = ({
             border-[1px]
             border-neutral-400
             flex
-            itmes-center
+            items-center
             justify-center
             text-neutral-600
             cursor-pointer
