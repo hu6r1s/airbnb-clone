@@ -109,7 +109,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
             $ {price}
           </div>
           {!reservation && (
-            <div className="font=light">night</div>
+            <div className="font-light">night</div>
           )}
         </div>
         {onAction && actionLabel && (
